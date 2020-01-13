@@ -1,0 +1,7 @@
+<h1>Beats by Rails Songs</h1>
+
+<% @songs.each do |song| %>
+    <h3>By <%= link_to song.artist.name, artist_path(song) %></h3>
+    <p><%= link_to song.name, song_path(song) %></p>
+    <p>Genre: <%= link_to song.genre.name, genre_path(song) %></p><br>
+<% end %>
